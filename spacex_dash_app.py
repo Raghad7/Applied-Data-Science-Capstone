@@ -89,7 +89,7 @@ def get_scatter_chart(site_dropdown, payload_slider):
         
     data['Booster_Version'] = Booster_Version
     
-    if site_dropdown == 'All Sites':
+    if site_dropdown == 'All':
         fig1 = px.scatter(data[(data['Payload Mass (kg)'] > min(payload_slider)) & (data['Payload Mass (kg)'] < max(payload_slider))], 
                         x="Payload Mass (kg)", y="class", 
                         color="Booster_Version",
